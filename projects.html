@@ -1,0 +1,99 @@
+<div class="content padded">
+
+    <div class="row">
+
+    	<div class="col-lg-6">
+
+        	<!-- Top Bar -->
+            <div class="top-bar">
+            	<span class="pull-left"><a href="#" class="ajax-project-close btn btn-default btn-sm btn-pull-up"><i class="fa fa-times icon-before"></i>Close</a></span>
+                <h6 class="pull-right text-muted short">Project Details</h6>
+            </div>
+
+  			<div class="long">
+                <h2 class="short">Disneyland Hong Kong</h2>
+                <span class="text-muted">"The Golden Mickeys"/ "The Welcome Wagon"</span>
+            </div>
+
+            <div class="row">
+
+            	<div class="col-lg-6">
+                	<h5>General Info</h5>
+                    <p>Katie Moya is a Los Angeles-based musical theatre performer with a strong background in vocal performance and comedic acting. Having graduated from AMDA College and Conservatory of the Performing Arts with a Certificate in Musical Theatre, she understands the need to soak up as much knowledge and experience as she can in short periods of time. Her love for theatre began at a very young age, and propelled her into as much training she could get through her adolescence. </p>
+                </div>
+
+                <div class="col-lg-6">
+                	<h5>Project Details</h5>
+                    <p>Katie was heavily involved with theatre through out high school and regularly trained in Improv, acting, and classical vocal technique. Her passion for performing eventually led her to AMDA, where she thrived working under Broadway professionals daily through-out the two year program. Shortly before graduation, Katie was offered the opportunity to work as a principal vocalist in Hong Kong Disneyland. Not only did she take it, but she stayed in Hong Kong for nearly two years, performing and traveling around most of Southeast Asia. Her experiences in the Asia have shaped her into a curious, hungry, and well-rounded performer and person.</p>
+                </div>
+
+                <div class="col-lg-12">
+
+                    <p><a href="components.html" class="btn btn-primary">Current Performances</a> <a href="#contact" class="btn btn-default">Contact</a></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="images/katiepics/mulansmall.jpg" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/katiepics/belle3.jpg" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/katiepics/tstory.jpg" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/katiepics/finale.jpg" alt="" />
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+          </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script>
+$(document).ready(function (){
+
+  // Ajax Project Close
+
+  function closeContent() {
+	  $('.project-content').delay(100).slideUp(1000,function() { $('.project-loader').show(0); $('.project-loader .logo-loader').show(0); $.waypoints('refresh') });
+	  $('html, body').animate({scrollTop:$('#portfolio').position().top },600);
+  }
+
+  $('.ajax-project-close').click(function() {
+	  closeContent();
+  });
+
+});
+</script>
